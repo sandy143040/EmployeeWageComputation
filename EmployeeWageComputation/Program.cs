@@ -19,27 +19,27 @@ namespace EmployeeWageComputation
 
             //welcome message
             Console.WriteLine("Welcome to Employee Wage Computation Problem statement");
-            //UC3- Employee part time wage
+            //UC3- Switch Case Statement
             Random random = new Random();
             int employeeAttendence = random.Next(0, 3); //0 , 1 or 2
-            if (employeeAttendence == IS_FULL_TIME)
+            switch (employeeAttendence)
             {
-                Console.WriteLine("employee attendence is present");
-                empHrs = 8;
+                case IS_FULL_TIME:
+                    // code block
+                    empHrs = 8;
+                    break;
+                case IS_PART_TIME:
+                    //code block
+                    empHrs = 4;
+                    break;
+                default:
+                    //code block
+                    empHrs = 0;
+                    break;
             }
-            else if (employeeAttendence == IS_PART_TIME)
-            {
-                Console.WriteLine("Parttime employee attendence is present");
-                empHrs = 4;
-            }
-            else
-            {
-                Console.WriteLine("employee attendence is absent");
-                empHrs = 0;
-            }
-            empWage = EMP_RATE_PER_HR * empHrs;
-            Console.WriteLine("Employee wage is:" + empWage);
-            Console.ReadLine();
+               empWage = EMP_RATE_PER_HR * empHrs;
+               Console.WriteLine("Employee wage is:" + empWage);
+               Console.ReadLine();
         }
     }
 }
