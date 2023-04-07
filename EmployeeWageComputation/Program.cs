@@ -10,6 +10,7 @@ namespace EmployeeWageComputation
     {
         static void Main(string[] args)
         {
+
             int empHrs = 0;
             int isPresent = 1;
             int empWage = 0;
@@ -17,10 +18,10 @@ namespace EmployeeWageComputation
 
             //welcome message
             Console.WriteLine("Welcome to Employee Wage Computation Problem statement");
-            //UC2- Calculate Employee wage
+            //UC1- EmployeeAttendence
             Random random = new Random();
             int employeeAttendence = random.Next(0, 2); //0 or 1
-            if(employeeAttendence== isPresent)
+            if (employeeAttendence == isPresent)
             {
                 Console.WriteLine("employee attendence is present");
                 empHrs = 8;
